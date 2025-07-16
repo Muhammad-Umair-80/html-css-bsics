@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+    *{
+      margin: 0 ;
+      padding: 0;
+    }
+    .box{
+      background-color: aqua;
+    }
+    .box1{
+      margin: 20px;
+      height: 50px;
+      padding: 40px;
+      text-align: center;
+      
+      border: solid 5px black;
+    }
+    .box2{
+
+      margin: 500px;
+      text-align: center;
+      padding: 20px;
+
+    }
+    .contain{
+      border: solid 2px black;
+      display: grid;
+      grid-template-areas: "nav nav nav"
+                           "art art aside"
+                           "article article article"
+                           "footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 100px 200px 1fr 100px;
+
+    }
+    .item{
+      background-color: lightblue;
+      border: solid 2px black;
+      padding: 10px;
+      text-align: center;  
+    }
+    .item1{
+
+      grid-area: nav;
+
+    }
+    .item2{
+      grid-area: art;
+    }
+    .item3{
+      grid-area: article;
+    }
+    .item4{
+      grid-area: footer;
+    }
+    .item5{
+      grid-area: nav;
+    }
+  </style>
+</head>
+<body>
+  <div class="contain">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+  </div>
+</body>
+</html>
